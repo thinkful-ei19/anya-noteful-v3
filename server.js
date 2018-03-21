@@ -15,7 +15,8 @@ app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'common', {
   skip: () => process.env.NODE_ENV === 'test'
 }));
 
-// Create a static webserver
+// Create a static webservermongoose
+
 app.use(express.static('public'));
 
 // Parse request body

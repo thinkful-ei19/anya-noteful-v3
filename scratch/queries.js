@@ -80,3 +80,29 @@ mongoose.connect(MONGODB_URI)
     console.error(`ERROR: ${err.message}`);
     console.error(err);
   });
+
+  /*  console.log('get id works');
+  console.log(req.params.title);
+  mongoose.connect(MONGODB_URI)
+    .then(() => Note.createIndexes())
+    .then(() => {
+      return Note
+        .find(
+          { $text: { $search:  `${req.params.title} ${req.params.content}`} },
+          { score: { $meta: 'textScore' } }
+        )
+        .sort({ score: { $meta: 'textScore' } })
+        .then(results => {
+          res.json(results);
+        });
+    })
+    .then(() => {
+      return mongoose.disconnect()
+        .then(() => {
+          console.info('Disconnected');
+        });
+    })
+    .catch(err => {
+      res.status(500).json({message: 'Internal server error'});
+      console.error(err);
+    });*/
