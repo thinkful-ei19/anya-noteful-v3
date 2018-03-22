@@ -151,7 +151,7 @@ describe ('Notes API resources', function() {
     });
   });
 
-  describe.only('DELETE api/notes/:id', function() {
+  describe('DELETE api/notes/:id', function() {
     it('should delete an item by id', function() {
       let data;
       return Note.findOne().select('id title content')
